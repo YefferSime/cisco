@@ -1,7 +1,17 @@
+<style>
+  /* Responsive garantizado sin depender del CDN de Tailwind */
+  .nav-desktop { display: none; }
+  .nav-mobile  { display: flex; flex-direction: column; gap: .375rem; }
+  @media (min-width: 1024px) {
+    .nav-desktop { display: flex; }
+    .nav-mobile  { display: none; }
+  }
+</style>
+
 <nav class="bg-white w-full border-b border-gray-100">
   <div class="container mx-auto px-4">
     <!-- Desktop Navbar -->
-    <div class="hidden lg:flex justify-between items-center py-3">
+    <div class="nav-desktop justify-between items-center py-3">
       <!-- Logo -->
       <div class="flex items-center">
         <img
@@ -38,7 +48,7 @@
     </div>
 
     <!-- Mobile Navbar -->
-    <div class="lg:hidden flex flex-col gap-1.5">
+    <div class="nav-mobile flex-col gap-1.5">
       <!-- Barra superior -->
       <div class="flex justify-between items-center py-2">
         <div class="flex items-center gap-2">
