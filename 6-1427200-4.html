@@ -1118,51 +1118,8 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: TABS + MODAL DE IMÁGENES -->
-  <script>
-    // Cambio de pestañas
-    document.getElementById('product-tab').addEventListener('click', function () {
-      document.getElementById('information-section').classList.remove('hidden');
-      document.getElementById('images-section').classList.add('hidden');
-      this.classList.remove('bg-gray-100', 'text-gray-700');
-      this.classList.add('bg-blue-600', 'text-white');
-      var imagesTab = document.getElementById('images-tab');
-      imagesTab.classList.remove('bg-blue-600', 'text-white');
-      imagesTab.classList.add('bg-gray-100', 'text-gray-700');
-    });
-
-    document.getElementById('images-tab').addEventListener('click', function () {
-      document.getElementById('information-section').classList.add('hidden');
-      document.getElementById('images-section').classList.remove('hidden');
-      this.classList.remove('bg-gray-100', 'text-gray-700');
-      this.classList.add('bg-blue-600', 'text-white');
-      var productTab = document.getElementById('product-tab');
-      productTab.classList.remove('bg-blue-600', 'text-white');
-      productTab.classList.add('bg-gray-100', 'text-gray-700');
-    });
-
-    // Modal de imagen
-    function viewImage(src) {
-      document.getElementById('modal-image').src = src;
-      document.getElementById('image-modal').classList.remove('hidden');
-    }
-
-    function toExchangeImage(el) {
-      document.getElementById('img_main').src = el.src;
-    }
-
-    function closeModal() {
-      document.getElementById('image-modal').classList.add('hidden');
-    }
-
-    document.getElementById('image-modal').addEventListener('click', function (e) {
-      if (e.target === this) closeModal();
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeModal();
-    });
-  </script>
+  <!-- JAVASCRIPT: TABS + MODAL DE IMÁGENES (compartido) -->
+  <script src="./js/change_tabs.js"></script>
 </body>
 
 </html>

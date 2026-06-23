@@ -4,12 +4,73 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-
+/* Ocultar scrollbar manteniendo funcionalidad */
 .scrollbar-hide {
-    scrollbar-width: none; /* Para Firefox */
-    -ms-overflow-style: none; /* Para IE y Edge */
-  }
-  
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 .scrollbar-hide::-webkit-scrollbar {
-    display: none; /* Para Chrome, Safari y Opera */
-  }
+  display: none;
+}
+
+/* Submenú de navegación: resalta el item activo */
+.nav-item {
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.nav-item:hover {
+  background-color: #EFF6FF;
+  transform: translateY(-1px);
+}
+.nav-item:hover span {
+  color: #2563EB;
+}
+
+/* Tarjetas de producto: sombra suave al hacer hover */
+.product-card {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen principal del producto: zoom sutil al hover */
+#img_main {
+  transition: transform 0.3s ease;
+}
+#img_main:hover {
+  transform: scale(1.03);
+}
+
+/* Secciones <details>: animación de apertura */
+details > div {
+  animation: fadeSlideIn 0.2s ease;
+}
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal de imagen: transición de aparición */
+#image-modal {
+  transition: opacity 0.2s ease;
+}
+#image-modal.hidden {
+  display: none;
+}
+
+/* Botones de acción: efecto press */
+a[href*="pedido"],
+a[href*="wa.me"] {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+a[href*="pedido"]:active,
+a[href*="wa.me"]:active {
+  transform: scale(0.97);
+}
+
+/* Miniaturas de imagen: borde azul al seleccionar */
+.thumbnail-active {
+  border-color: #2563EB !important;
+  box-shadow: 0 0 0 2px #BFDBFE;
+}
