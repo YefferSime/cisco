@@ -44,12 +44,58 @@ body {
 /* ─── Layout principal: sin borde pesado ─────────────────────────── */
 .layout-wrapper { border: none !important; }
 
-/* ─── Sidebar de marcas ──────────────────────────────────────────── */
+/* ─── Sidebars ───────────────────────────────────────────────────── */
 aside {
   border: none !important;
   box-shadow: none !important;
-  border-right: 1px solid #F1F5F9 !important;
 }
+.sidebar-title {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  padding-bottom: .6rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+/* Brand items */
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .45rem .6rem;
+  border-radius: .5rem;
+  border: 1.5px solid transparent;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+.brand-item:hover {
+  background: #EFF6FF;
+  border-color: #BFDBFE;
+  transform: translateY(-1px);
+}
+.brand-item.active {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+}
+
+/* Price links */
+.price-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .35rem .5rem;
+  border-radius: .375rem;
+  font-size: .72rem;
+  color: #6B7280;
+  transition: background .12s, color .12s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.price-link:hover { background: #EFF6FF; color: var(--color-primary); }
+.price-link.active { color: var(--color-primary); font-weight: 700; background: #EFF6FF; }
 
 /* ─── Sección de producto principal ─────────────────────────────── */
 #information-section .bg-white.rounded-lg.shadow-sm {
