@@ -223,18 +223,14 @@ details > div { animation: fadeDown .2s ease; }
   box-shadow: 0 0 0 3px #BFDBFE;
 }
 
-/* ─── Footer oscuro ──────────────────────────────────────────────── */
+/* ─── Footer claro (homogéneo con el resto de la página) ─────────── */
 footer {
-  background: var(--color-dark) !important;
-  color: #9CA3AF !important;
+  background: #FFFFFF;
+  color: var(--color-dark);
 }
-footer h3          { color: #F9FAFB !important; }
-footer a           { color: #9CA3AF !important; }
-footer a:hover     { color: #FFFFFF !important; }
-footer .border-t   { border-color: #374151 !important; }
-footer .text-gray-500 { color: #6B7280 !important; }
-footer .fab.fa-facebook-f:hover { color: #60A5FA !important; }
-footer .fab.fa-whatsapp:hover   { color: #4ADE80 !important; }
+footer a       { color: #6B7280; transition: color .15s; }
+footer a:hover { color: var(--color-primary); }
+footer .border-t { border-color: #F1F5F9; }
 
 /* ─── Specs: tabla label/valor (páginas de cable) ───────────────────── */
 .spec-table { width: 100%; }
