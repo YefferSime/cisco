@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Cargar el navbar
-    fetch('./components/navbar.html')
+    fetch('./components/navbar.html', { cache: 'no-store' })
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
